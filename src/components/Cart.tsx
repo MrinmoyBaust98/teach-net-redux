@@ -18,13 +18,9 @@ import { addToCart, removeFromCart, removeOneCart } from '@/redux/features/cart/
 
 export default function Cart() {
 
-  const {products}=useAppSelector((state)=>state.cart);
+  const {products,total}=useAppSelector((state)=>state.cart);
   const dispatch=useAppDispatch();
-  //! Dummy data
-
-  const total = 0;
-
-  //! **
+ 
 
   return (
     <Sheet>
