@@ -14,7 +14,7 @@ import {
 } from 'react-icons/hi';
 import { Button } from './ui/button';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
-import { addToCart, removeFromCart } from '@/redux/features/cart/cartSlice';
+import { addToCart, removeFromCart, removeOneCart } from '@/redux/features/cart/cartSlice';
 
 export default function Cart() {
 
@@ -59,7 +59,7 @@ export default function Cart() {
                 <Button onClick={()=>dispatch(addToCart(product))}>
                   <HiOutlinePlus size="20" />
                 </Button>
-                <Button >
+                <Button onClick={()=>dispatch(removeOneCart(product))}>
                   <HiMinus size="20" />
                 </Button>
                 <Button onClick={()=>dispatch(removeFromCart(product))}
