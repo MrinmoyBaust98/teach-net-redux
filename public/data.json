@@ -1,6 +1,5 @@
 [
   {
-    "_id": 1,
     "name": "Haylou GST",
     "image": "https://live.staticflickr.com/65535/52953899202_478089ea5f_h.jpg",
     "price": 31.99,
@@ -13,10 +12,10 @@
       "20 days of battery life"
     ],
     "status": true,
-    "rating": 4
+    "rating": 4,
+    "comments": []
   },
   {
-    "_id": 2,
     "name": "Haylou GS",
     "image": "https://live.staticflickr.com/65535/52954632614_2db2bed3a7_h.jpg",
     "price": 32.38,
@@ -29,10 +28,10 @@
       "20-day battery life"
     ],
     "status": false,
-    "rating": 3
+    "rating": 3,
+    "comments": []
   },
   {
-    "_id": 3,
     "name": "Haylou Solar Plus RT3",
     "image": "https://live.staticflickr.com/65535/52953899127_38e776f3f7_h.jpg",
     "price": 48.79,
@@ -44,10 +43,10 @@
       "Versatile watch faces, support customize watch face"
     ],
     "status": true,
-    "rating": 5
+    "rating": 5,
+    "comments": []
   },
   {
-    "_id": 4,
     "name": "Haylou RT2",
     "image": "https://live.staticflickr.com/65535/52954494936_efd69e2df9_h.jpg",
     "price": 38.99,
@@ -59,10 +58,10 @@
       "20 days of battery life"
     ],
     "status": true,
-    "rating": 2
+    "rating": 2,
+    "comments": []
   },
   {
-    "_id": 5,
     "name": "Haylou RS4 Plus",
     "image": "https://live.staticflickr.com/65535/52953899137_072c5c4ffc_h.jpg",
     "price": 54.84,
@@ -75,10 +74,10 @@
       "Support Alipay offline payment"
     ],
     "status": false,
-    "rating": 4
+    "rating": 4,
+    "comments": []
   },
   {
-    "_id": 6,
     "name": "Haylou RS3",
     "image": "https://live.staticflickr.com/65535/52953899132_fead48e579_h.jpg",
     "price": 63.07,
@@ -91,6 +90,7 @@
       "21 days of battery life"
     ],
     "status": true,
-    "rating": 5
+    "rating": 5,
+    "comments": []
   }
 ]
