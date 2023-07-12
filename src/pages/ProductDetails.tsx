@@ -1,13 +1,13 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import ProductReview from '@/components/ProductReview';
 import { Button } from '@/components/ui/button';
 import { useSingleProductsQuery } from '@/redux/api/apiSlice';
-import { IProduct } from '@/types/globalTypes';
 import { useParams } from 'react-router-dom';
 
 export default function ProductDetails() {
   const { id } = useParams();
 
-  const {data:product}=useSingleProductsQuery(id)
+  const { data: product } = useSingleProductsQuery(id);
 
   return (
     <>
@@ -19,14 +19,14 @@ export default function ProductDetails() {
           <h1 className="text-3xl font-semibold">{product?.name}</h1>
           <p className="text-xl">Rating: {product?.rating}</p>
           <ul className="space-y-1 text-lg">
-            {product?.features?.map((feature:string) => (
+            {product?.features?.map((feature: string) => (
               <li key={feature}>{feature}</li>
             ))}
           </ul>
           <Button>Add to cart</Button>
         </div>
       </div>
-      <ProductReview />
+      <ProductReview id={id!} />
     </>
   );
 }
