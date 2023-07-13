@@ -3,16 +3,24 @@ import { Toaster } from './components/ui/Toaster';
 import MainLayout from './layouts/MainLayout';
 import { auth } from './lib/firebase';
 import { useAppDispatch } from './redux/hooks';
-import { setuser } from './redux/features/user/userSlice';
+import { setLoading, setuser } from './redux/features/user/userSlice';
+import { useEffect } from 'react';
 
 function App() {
   const dispatch = useAppDispatch();
+
   // parsistency maintain
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      dispatch(setuser(user.email));
-    }
-  });
+  useEffect(() => {
+    dispatch(setLoading(true));
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        dispatch(setuser(user.email));
+        dispatch(setLoading(false));
+      } else {
+        dispatch(setLoading(false));
+      }
+    });
+  }, [dispatch]);
 
   return (
     <div>

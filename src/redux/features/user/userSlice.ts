@@ -53,6 +53,9 @@ const userSlice = createSlice({
     setuser: (state, action) => {
       state.user.email = action.payload;
     },
+    setLoading: (state, action) => {
+      state.isLoading = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -89,7 +92,7 @@ const userSlice = createSlice({
   },
 });
 
-export const { setuser } = userSlice.actions;
+export const { setuser, setLoading } = userSlice.actions;
 // export const { } = productSlice.actions;
 
 export default userSlice.reducer;
